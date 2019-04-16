@@ -1,4 +1,4 @@
-package com.devcolibri.dataexam.service.impl;
+package com.example.demo.service.impl;
 
 import com.example.demo.entity.UserData;
 import com.example.demo.repository.UserDataRepository;
@@ -13,17 +13,17 @@ public class UserDataServiceImpl implements UserDataService{
     private UserDataRepository userDataRepository;
 
     @Override
-    User addUserData(UserData userData) {
+    UserData addUserData(UserData userData) {
         return userDataRepository.saveAndFlush(userData);
     }
 
     @Override
-    public void delete(long id) {
-        userDataRepository.delete(id);
+    public void delete(long uid) {
+        userDataRepository.delete(uid);
     }
 
     @Override
-    public User editUserData(UserData userData) {
+    public UserData editUserData(UserData userData) {
         return userDataRepository.saveAndFlush(userData);
     }
 

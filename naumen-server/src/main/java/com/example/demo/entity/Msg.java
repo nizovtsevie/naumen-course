@@ -26,7 +26,7 @@ public class Msg {
     @Column(name="relatedMsgId", length = 6, nullable=true)
     private long RelatedMsgId;
 
-    @ManyToOne(fetch =FetchType.LAZY,)
+    @ManyToOne(fetch =FetchType.LAZY, cascade= CascadeType.PERSIST)
     @JoinColumn(name = "UId", nullable=false)
     private User user;
 

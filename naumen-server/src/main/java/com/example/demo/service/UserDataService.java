@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface UserDataService {
 
-    User addUserData(UserData userData);
+    UserData addUserData(UserData userData);
     void delete(long uid);
-    User editUserData(UserData userData);
+    UserData editUserData(UserData userData);
     List<UserData> getAll();
 
 }

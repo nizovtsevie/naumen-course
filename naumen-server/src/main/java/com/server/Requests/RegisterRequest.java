@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.server.Requests;
 
 
 import javax.validation.constraints.NotNull;

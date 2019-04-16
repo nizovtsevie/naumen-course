@@ -4,6 +4,8 @@ import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 import java.util.List;
 
@@ -13,13 +15,13 @@ public class UserServiceImpl implements UserService{
     private UserRepository userRepository;
 
     @Override
-    User addUser(User user) {
+    public User addUser(User user) {
         return userRepository.saveAndFlush(user);
     }
 
     @Override
     public void delete(long uid) {
-        userRepository.delete(uid);
+        userRepository.deleteById(uid);
     }
 
     @Override

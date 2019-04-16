@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
 import javax.persistence.Entity;
-import com.example.demo.entity.enums;
+import com.example.demo.entity.enums.*;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table
@@ -21,6 +23,7 @@ public class Msg {
     private long MsgBox;
 
     @Column(name="relationType", nullable=true)
+    @Enumerated(EnumType.STRING)
     private RelationType Relation;
 
     @Column(name="relatedMsgId", length = 6, nullable=true)
@@ -43,7 +46,7 @@ public class Msg {
     }
 
     public void setMsgId(long msgId) {
-        this.MsgIdId = msgId;
+        this.MsgId = msgId;
     }
 
     public long getMsgBox() {

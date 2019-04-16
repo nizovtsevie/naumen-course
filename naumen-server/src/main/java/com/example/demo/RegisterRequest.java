@@ -8,7 +8,7 @@ public class RegisterRequest {
     private String username;
 
     @NotNull
-    private String login;
+    private String email;
 
     @NotNull
     private String password;
@@ -17,8 +17,8 @@ public class RegisterRequest {
         return this.username;
     }
 
-    public String getLogin() {
-        return this.login;
+    public String getEmail() {
+        return this.email;
     }
 
     public String getPassword() {

@@ -2,7 +2,8 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table

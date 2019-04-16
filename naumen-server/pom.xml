@@ -18,7 +18,8 @@
         <java.version>1.8</java.version>
         <vaadin.version>13.0.3</vaadin.version>
         <mysql.version>5.1.29</mysql.version>
-        <hb.manager>4.2.5.Final</hb.manager>
+        <hb.manager>5.4.2.Final</hb.manager>
+        <hibernate-version>5.4.2.Final</hibernate-version>
     </properties>
 
     <dependencies>

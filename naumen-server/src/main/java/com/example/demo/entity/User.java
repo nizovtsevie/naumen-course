@@ -2,7 +2,9 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import org.hibernate.annotations.Cascade;
+import java.util.*;
 
 @Entity
 @Table
@@ -26,16 +28,16 @@ public class User {
     @JoinColumn(name="UId", unique = true, nullable = false, updatable = false)
     private UserData userData;
 
-    @OneToMany(cascade = cascadeType.All, fetch=FetchType.EAGER, mappedBy="user")
+    @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="user")
     private Set<Msg> Msges;
 
 
     public User() {
 
     }
-    public User(String username, String login, String password) {
+    public User(String username, String email, String password) {
         this.Username = username;
-        this.Login = login;
+        this.Email = email;
         this.Password = password;
     }
 
@@ -71,9 +73,9 @@ public class User {
         Password = password;
     }
 
-    public void Fill(String username, String login, String password){
+    public void Fill(String username, String email, String password){
         Username = username;
-        Login = login;
+        Email = email;
         Password = password;
     }
 
